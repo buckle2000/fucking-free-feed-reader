@@ -5,6 +5,7 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title 阅读器
   body
+    h1 现在是 #{now}
     section
       h2 消息
       each category in item_data
@@ -23,7 +24,11 @@ html
                   td: a(href=item.feed_link)=item.feed_name
                   td: a(href=item.link)=item.title
                   td=item.author
-                  td=item.date
+                  td
+                    if item.date
+                      = item.date
+                    else
+                      | 无
         hr
     section
       h2 已关注推送消息
@@ -38,5 +43,9 @@ html
             tr
               td: a(href=meta.link)=meta.feed_name
               td=meta.title
-              td=meta.date
+              td
+                if meta.date
+                  = meta.date
+                else
+                  | 无
               
