@@ -14,12 +14,12 @@ const feed_data = []
 const category_name_to_feeds = new Map()
 
 for (const {
-    category_name,
+    name: category_name,
     feeds
   } of categories) {
   category_name_to_feeds.set(category_name, [])
   for (const {
-      feed_name,
+      name: feed_name,
       uri
     } of feeds) {
     const feedparser = new FeedParser()

@@ -6,7 +6,7 @@ html
     title 阅读器
   body
     section
-      h2 推文
+      h2 消息
       each category in item_data
         div
           h3=category.name
@@ -31,7 +31,7 @@ html
         thead
           tr
             td 我赋予的名称
-            td 自称
+            td 推送消息自称
             td 最后更新
         tbody
           each meta in feed_data
