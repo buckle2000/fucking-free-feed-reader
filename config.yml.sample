@@ -1,0 +1,19 @@
+categories:
+  -
+    name: 新闻
+    feeds:
+    - 
+      name: 新闻 1
+      uri: https://news1.example.com/rss
+    - 
+      name: 新闻 2
+      uri: https://news2.example.com/rss
+  -
+    name: 网志
+    feeds:
+    - 
+      name: 文集 1
+      uri: https://blog1.example.com/rss
+    - 
+      name: 文集 2
+      uri: https://blog2.example.com/rss

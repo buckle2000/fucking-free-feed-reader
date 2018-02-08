@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title 阅读器
+  body
+    section
+      h2 推文
+      each category in item_data
+        div
+          h3=category.name
+          table
+            thead
+              tr
+                td 来源
+                td 标题
+                td 作者
+                td 最后更新
+            tbody
+              each item in category.items
+                tr
+                  td: a(href=item.feed_link)=item.feed_name
+                  td: a(href=item.link)=item.title
+                  td=item.author
+                  td=item.date
+        hr
+    section
+      h2 已关注推送消息
+      table
+        thead
+          tr
+            td 我赋予的名称
+            td 自称
+            td 最后更新
+        tbody
+          each meta in feed_data
+            tr
+              td: a(href=meta.link)=meta.feed_name
+              td=meta.title
+              td=meta.date
+              
